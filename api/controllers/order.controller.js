@@ -12,7 +12,6 @@ export const getOrders = async (req, res, next) => {
       isCompleted: true,
     });
 
-    console.log(orders);
     res.status(200).send(orders);
   } catch (err) {
     next(err);
