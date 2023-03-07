@@ -1,3 +1,4 @@
+import path from 'path'
 import express from 'express';
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
@@ -47,6 +48,14 @@ app.use((err , req,res, next) => {
     return res.status(errStatus).send(errMessage);
 }) 
 
+
+app.get('/', (req, res) => {
+
+    app.use(express.static(path.resolve(__dirname,'client','dist')))
+    app.sendFile(express.static(path.resolve(__dirname,'client','dist', 'index.html')))
+
+
+})
 
 app.listen(8800, () => {
     connect();
