@@ -1,0 +1,95 @@
+.featured{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(1, 33, 13, 0.994);
+    color: white;
+    align-items: center;
+    .container{
+        
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h1{
+                font-size: 45px;
+                i{
+                    font-weight: 300;
+                }
+            }
+            .search{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #f3f3f3;
+                border-radius: 10px;
+                .searchInput{
+                    display: flex;
+                    align-items: center;
+                    flex-grow: 2;
+                    gap: 10px;
+                    img{
+                        width: 20px;
+                        height: 20px;
+                        margin: 10px;
+                    }
+                    input{
+                        height: 40px;
+                        width: 100%;
+                        font-size: 16px;
+                        border: none;
+                        outline: none;
+                    }
+
+                }
+                button{
+                    height: 40px;
+                    background-color: rgb(29, 191, 115);
+                    flex: 1;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    color: white;
+                    font-size:  16px;
+                    letter-spacing: 2px;
+                    border-radius: 0 10px 10px 0px ;
+                    &:hover{
+                        background-color: rgb(24, 138, 85);
+                    }
+                }
+            }
+
+            .popular{
+                display: flex;
+                gap: 10px;
+                span{
+                    font-size: 26px;
+                }
+                button{
+                    color: #f3f3f3;
+                    background-color: transparent;
+                    border: 1px solid white;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgb(24, 138, 85);
+                        border: 1px solid transparent
+                    }
+                }
+            }
+
+        }
+        .right{
+            
+            img{
+                height: 100%;    
+                object-fit: contain;
+            }
+        }
+    }
+}

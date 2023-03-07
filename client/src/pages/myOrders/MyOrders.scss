@@ -1,0 +1,55 @@
+.myorders{
+    display: flex;
+    justify-content: center;
+    .container{
+        width: 100%;
+        padding: 50px 0;
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                background-color: #1dbf73;
+                color:white !important;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-weight: 500;
+                font-size: 18px;
+                &:hover{
+                    background-color: #1dbf73;
+                }
+                
+            }
+        }
+
+        table{
+            width: 100%;
+            margin: 50px 0;
+            tr{
+                height: 50px;
+                th{
+                    text-align: left;
+                }
+                td{
+                    .image{
+                        width: 50px;
+                        height: 25px;
+                        object-fit: cover;
+                    }
+                    .delete{
+                        width: 20px;
+                        cursor: pointer;
+                    }
+                }
+
+                &:nth-child(even){
+                    background-color: #1dbf730f;
+                }
+            }
+        }
+    }
+
+}
