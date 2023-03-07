@@ -12,14 +12,12 @@ const stripePromise = loadStripe("pk_test_51MiNbrSFknHmPFGp9ag8i5nme5qJqyx2Utxck
 const Pay = () => {
     const [clientSecret, setClientSecret] = useState("");
     const id = useParams()
-    console.log(id);
 
     useEffect(() => {
       const makeRequest = async () => {
 
         try{
           const res = await newRequest.post(`order/create-payment-intent/${id.id}`)
-          console.log("res"  ,res);
           setClientSecret(res.data.clientSecret);
           
         }catch(err){
@@ -38,9 +36,6 @@ const Pay = () => {
         clientSecret,
         appearance,
       };  
-
-
-      console.log("clientSecret =>" , clientSecret)
     
 
     return (

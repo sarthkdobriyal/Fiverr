@@ -97,7 +97,7 @@ const Gig = () => {
                     {Array(Math.round(data.starRating))
                     .fill()
                     .map((_, i) => {
-                      return <img src="/images/star.png" alt="" />;
+                      return <img src="/images/star.png" alt="" key={i} />;
                     })}
                   <span>{Math.round(data.starRating)}</span>
                     </div>

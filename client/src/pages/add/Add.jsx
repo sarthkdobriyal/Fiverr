@@ -70,7 +70,7 @@ const Add = () => {
     console.log(state)
     e.preventDefault();
     mutation.mutate(state);
-    // navigate("/mygigs");
+    navigate("/mygigs");
 
   }
 

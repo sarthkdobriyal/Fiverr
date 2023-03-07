@@ -20,7 +20,7 @@ const Gigs = () => {
   const query = useQuery({
     queryKey: ["gigs"],
     queryFn: async () => {
-      const res = await newRequest.get(`gig/gigs${search}&min=${minref.current.value}&max=${maxref.current.value}&sort=${sort}`);
+      const res = await newRequest.get(`gig/gigs${search ? search : '?search=' }&min=${minref.current.value}&max=${maxref.current.value}&sort=${sort}`);
       // console.log(res.data);
       return res.data;
     },
