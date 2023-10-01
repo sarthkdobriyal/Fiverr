@@ -13,12 +13,16 @@ import authRoute from './routes/auth.route.js'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 
+
+const compression = require("compression");
 const app = express();
 dotenv.config();
 
 const connect = () => {
     const db_link  = process.env.MONGO;
-    mongoose.connect(db_link)
+    mongoose.connect(db_link, {
+        dbName: 'fiverr',
+    })
     .then((db) => {
         console.log('db connected')
     })
@@ -27,6 +31,7 @@ const connect = () => {
     })
 }
 
+app.use(compression());
 app.use(cors({origin: `${process.env.FRONT_URL}`, credentials: true}))
 app.use(express.json());
 app.use(cookieParser())

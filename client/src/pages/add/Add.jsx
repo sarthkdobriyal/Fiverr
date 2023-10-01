@@ -64,6 +64,9 @@ const Add = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["add"] });
     },
+    onError: (err) => {
+      console.log(err);
+    }
   });
 
   const handleSubmit = (e) => {

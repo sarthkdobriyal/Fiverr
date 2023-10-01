@@ -16,7 +16,7 @@ export const register = async(req,res, next) => {
         return res.status(201).send("User has been created");
     }
     catch(err){
-        next(createError(500, "Something went wrong"))
+        next(createError(500, `Error while creating user ${err.message}`))
     }
 }
 
