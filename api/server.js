@@ -14,7 +14,6 @@ import cookieParser from 'cookie-parser'
 import cors from 'cors'
 
 
-const compression = require("compression");
 const app = express();
 dotenv.config();
 
@@ -31,7 +30,7 @@ const connect = () => {
     })
 }
 
-app.use(compression());
+
 app.use(cors({origin: `${process.env.FRONT_URL}`, credentials: true}))
 app.use(express.json());
 app.use(cookieParser())
