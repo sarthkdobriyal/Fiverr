@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const newRequest = axios.create({
-    baseURL: "http://localhost:8800/api/",
+    baseURL: "https://fiverr-kvdkgp8hw-high-prog.vercel.app/api/",
     withCredentials:true,
 })
 
