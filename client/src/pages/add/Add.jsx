@@ -70,6 +70,7 @@ const Add = () => {
   });
 
   const handleSubmit = (e) => {
+    state.userId = JSON.parse(localStorage.getItem('currentUser'))._id
     console.log(state)
     e.preventDefault();
     mutation.mutate(state);
